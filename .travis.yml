@@ -18,13 +18,13 @@ env:
 #  - echo pip install molecule docker
 
 before_install:
-  - env
   - echo $MOLECULE_DISTRO
-  - echo $VERSION
   - echo $ANSIBLE
 install:
+  - 'set -x'
   - '[ -n "${ANSIBLE}" ] || ANSIBLE="ansible==2.8'
-  - 'pip install ${ANSIBLE} molecule'
+  - echo $ANSIBLE
+  - 'pip install "${ANSIBLE}" molecule'
 
 script:
   - molecule test
