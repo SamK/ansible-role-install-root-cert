@@ -25,10 +25,12 @@ before_install:
   - echo $MOLECULE_DISTRO
   - echo $ANSIBLE
 install:
-  - 'set -x'
   - '[ -n "${ANSIBLE}" ] || ANSIBLE="ansible==2.8"'
-  - echo $ANSIBLE
+  - 'echo $ANSIBLE'
+  - 'echo "${ANSIBLE}"'
   - 'pip install "${ANSIBLE}" molecule'
+  - 'pip freeze'
+  - 'ansible --version'
 
 script:
   - molecule test
