@@ -21,4 +21,5 @@ before_install:
   - env
   - echo $MOLECULE_DISTRO
   - echo $VERSION
-  - pip install ansible==${ANSIBLE_VERSION}
+  - '[ -n "${ANSIBLE}" ] || ANSIBLE=ansible'
+  - 'pip install ${ANSIBLE}'
