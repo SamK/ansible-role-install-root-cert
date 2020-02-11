@@ -28,7 +28,7 @@ install:
   - '[ -n "${ANSIBLE}" ] || ANSIBLE="ansible==2.8"'
   - 'echo $ANSIBLE'
   - 'echo "${ANSIBLE}"'
-  - 'pip install "${ANSIBLE}" molecule'
+  - 'pip install "${ANSIBLE}" "molecule[docker]"'
   - 'pip freeze'
   - 'ansible --version'
 
