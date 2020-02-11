@@ -8,11 +8,11 @@ python:
   - "nightly"
 env:
   - MOLECULE_DOCKER_IMAGE: "centos:7"
-  - MOLECULE_DOCKER_IMAGE: "ubuntu:14.04"
+  #- MOLECULE_DOCKER_IMAGE: "ubuntu:14.04"
   - MOLECULE_DOCKER_IMAGE: "ubuntu:16.04"
   - ANSIBLE: "ansible==2.7"
   - ANSIBLE: "ansible==2.8"
-  - ANSIBLE: "ansible==2.9"
+  #- ANSIBLE: "ansible==2.9"
 
 jobs:
   exclude:
