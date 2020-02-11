@@ -7,7 +7,7 @@ lint:
   name: yamllint
 platforms:
   - name: instance
-    image: centos:7
+    image: "${MOLECULE_DISTRO}"
 provisioner:
   name: ansible
   lint:
@@ -15,7 +15,7 @@ provisioner:
     options:
       x:
         - 502
-
+        - 504
 verifier:
   name: testinfra
   lint:
