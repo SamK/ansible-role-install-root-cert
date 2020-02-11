@@ -26,6 +26,7 @@ before_install:
   - echo $ANSIBLE
 install:
   - '[ -n "${ANSIBLE}" ] || ANSIBLE="ansible==2.8"'
+  - '[ -n "${MOLECULE_DOCKER_IMAGE}" ] || MOLECULE_DOCKER_IMAGE="centos:7"'
   - 'echo $ANSIBLE'
   - 'echo "${ANSIBLE}"'
   - 'pip install "${ANSIBLE}" "molecule[docker]"'
