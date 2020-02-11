@@ -7,9 +7,9 @@ python:
   - "3.6"
   - "nightly"
 env:
-  - MOLECULE_DISTRO: centos7
-  - MOLECULE_DISTRO: ubuntu1404
-  - MOLECULE_DISTRO: ubuntu1604
+  - MOLECULE_DISTRO: "centos:7"
+  - MOLECULE_DISTRO: "ubuntu:1404"
+  - MOLECULE_DISTRO: "ubuntu:1604"
   - ANSIBLE: "ansible==2.7"
   - ANSIBLE: "ansible==2.8"
   - ANSIBLE: "ansible==2.9"
