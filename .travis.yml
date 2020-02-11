@@ -34,4 +34,5 @@ install:
   - 'ansible --version'
 
 script:
+  - 'echo "${MOLECULE_DOCKER_IMAGE}"'
   - molecule test
