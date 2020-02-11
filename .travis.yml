@@ -12,9 +12,12 @@ env:
   - MOLECULE_DISTRO: ubuntu1604
   - ANSIBLE_VERSION: 2.7
   - ANSIBLE_VERSION: 2.8
+  - ANSIBLE_VERSION: 2.9
 
 #install:
 #  - echo pip install molecule docker
 
 script:
   - env
+  - echo $MOLECULE_DISTRO
+  - echo $ANSIBLE_VERSION
