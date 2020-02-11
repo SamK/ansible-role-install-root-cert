@@ -22,7 +22,7 @@ before_install:
   - echo $ANSIBLE
 install:
   - 'set -x'
-  - '[ -n "${ANSIBLE}" ] || ANSIBLE="ansible==2.8'
+  - '[ -n "${ANSIBLE}" ] || ANSIBLE="ansible==2.8"'
   - echo $ANSIBLE
   - 'pip install "${ANSIBLE}" molecule'
 
